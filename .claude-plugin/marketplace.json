@@ -1,0 +1,31 @@
+{
+  "name": "limelit",
+  "owner": {
+    "name": "Limelit",
+    "url": "https://limelit.co"
+  },
+  "description": "Official Limelit plugin for AI clients. Track and improve how AI answer engines mention and cite your brand.",
+  "plugins": [
+    {
+      "name": "limelit",
+      "source": "./",
+      "description": "AI visibility from your AI coding tool: how AI answers mention and cite your brand, the prompts you lose, the sources to earn, and what to write next.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Limelit",
+        "url": "https://limelit.co"
+      },
+      "homepage": "https://limelit.co/mcp-docs",
+      "repository": "https://github.com/clgtm/limelit-plugin",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "ai-visibility",
+        "geo",
+        "aeo",
+        "share-of-voice",
+        "citations"
+      ]
+    }
+  ]
+}

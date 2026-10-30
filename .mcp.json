@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "limelit": {
+      "type": "http",
+      "url": "https://api.limelit.co/mcp"
+    }
+  }
+}

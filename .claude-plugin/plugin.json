@@ -1,0 +1,22 @@
+{
+  "name": "limelit",
+  "description": "See how ChatGPT, Claude, Perplexity, Gemini and Google AI answers mention and cite your brand against competitors, find the prompts you lose and the sources to earn, and draft what to publish next, from your AI coding tool.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Limelit",
+    "url": "https://limelit.co"
+  },
+  "homepage": "https://limelit.co/mcp-docs",
+  "repository": "https://github.com/clgtm/limelit-plugin",
+  "license": "MIT",
+  "keywords": [
+    "ai-visibility",
+    "generative-engine-optimization",
+    "geo",
+    "aeo",
+    "llm-seo",
+    "share-of-voice",
+    "citations",
+    "search-console"
+  ]
+}

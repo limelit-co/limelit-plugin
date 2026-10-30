@@ -1,0 +1,17 @@
+{
+  "description": "Ask before any Limelit tool that spends credits, changes data, or cannot be undone, even when the Limelit server is allow-listed.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^mcp__(plugin_limelit_)?limelit__",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/gate-spend.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
