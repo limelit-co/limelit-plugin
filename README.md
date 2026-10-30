@@ -11,7 +11,7 @@ credits or cannot be undone.
 ## Install
 
 ```
-/plugin marketplace add clgtm/limelit-plugin
+/plugin marketplace add limelit-co/limelit-plugin
 /plugin install limelit@limelit
 ```
 
