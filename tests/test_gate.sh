@@ -35,5 +35,19 @@ check ask  "{\"tool_name\":\"${P}a_tool_added_later\",\"tool_input\":{}}"
 check pass "{\"tool_name\":\"${P}publish_draft\",\"tool_input\":{}}" "LIMELIT_GATE_DISABLE=1"
 check pass "not json"
 
+# The matcher in hooks.json must catch Limelit tools however the client prefixes
+# them, and nothing else.
+python3 - "$(dirname "$GATE")/hooks.json" <<'EOF' || fail=1
+import json, re, sys
+matcher = json.load(open(sys.argv[1]))["hooks"]["PreToolUse"][0]["matcher"]
+hit = ["mcp__plugin_limelit_limelit__publish_draft", "mcp__limelit__publish_draft",
+       "mcp__limelit-local__reevaluate_all_prompts"]
+miss = ["mcp__plugin_posthog_posthog__exec", "mcp__sentry__search_issues", "Bash", "Skill"]
+bad = [n for n in hit if not re.search(matcher, n)] + [n for n in miss if re.search(matcher, n)]
+if bad:
+    print("FAIL matcher", matcher, "wrong on", bad)
+    sys.exit(1)
+EOF
+
 if [[ $fail -eq 0 ]]; then echo "gate: all checks passed"; fi
 exit $fail

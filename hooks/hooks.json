@@ -3,7 +3,7 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "^mcp__(plugin_limelit_)?limelit__",
+        "matcher": "mcp__.*limelit.*__",
         "hooks": [
           {
             "type": "command",
